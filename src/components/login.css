@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("https://images.wallpapersden.com/image/download/firewatch-new-hd-22-art_bWpubm2UmZqaraWkpJRnamtlrWZpaWU.jpg")
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.login-container {
+  background: white;
+  padding: 25px;
+  width: 330px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+}
+.login-form {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.login-container input {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background: #2b7cff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.login-container button:hover {
+  background: #1d5fd1;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.custom-checkbox {
+  margin-right: 5px;
+}

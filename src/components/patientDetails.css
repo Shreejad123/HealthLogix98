@@ -1,0 +1,21 @@
+.container {
+  background-color: white;
+  width: 600px;
+  height: 600px;
+  margin-top: 60px;
+}
+.patientDetails {
+  background-color: white;
+  width: 600px;
+  height: 600px;
+}
+.patientdeatils {
+  margin-left: 20px;
+}
+/* p,
+button {
+  margin-left: 170px;
+}
+div {
+  margin-bottom: 20px;
+} */
