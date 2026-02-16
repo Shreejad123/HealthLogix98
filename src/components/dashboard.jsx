@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import SurgeryTable from "./SurgeryTable";
+import SurgeryTable from "./surgeryTable";
 import SurgerySearch from "./searchbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./dashboard.css";
@@ -25,7 +25,7 @@ const Dashboard = () => {
       : surgeryList.filter((surgery) =>
           surgery.patientFullName
             .toLowerCase()
-            .includes(searchTerm.toLowerCase())
+            .includes(searchTerm.toLowerCase()),
         );
 
   // Add new surgery
