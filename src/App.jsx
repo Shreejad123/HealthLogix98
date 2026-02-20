@@ -1,4 +1,3 @@
-import "./App.css";
 import Registration from "./components/registrationForm";
 import Header from "./components/Header";
 import { ToastMessageContainer } from "./components/ToastMessage";

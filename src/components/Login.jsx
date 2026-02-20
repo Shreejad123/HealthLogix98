@@ -50,58 +50,51 @@ function LoginForm() {
     <div className={styles.login}>
       <div className={styles.loginContainer}>
         <form className={styles.loginForm} onSubmit={handleSubmit}>
-          <h3 className="text-center mb - 4">Login</h3>
+          <h3 className={styles.header}>Login</h3>
           <div>
-            <label htmlFor="checkbox">Email:</label>
-          </div>
-          <div>
-            <input
-              type="email"
-              id="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
-          </div>
-          <div>
-            <label htmlFor="password">Password:</label>
-          </div>
-          <div>
-            <input
-              type="password"
-              id="password"
-              placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            {errors.password && (
-              <p style={{ color: "red" }}>{errors.password}</p>
-            )}
-          </div>
-          <div>
-            <div>
+            <label htmlFor="Email">Email</label>
+
+            <div className={styles.email}>
               <input
-                type="checkbox"
-                className="custom-checkbox"
-                id="checkbox"
-                checked={checkbox}
-                onChange={(e) => setCheckbox(e.target.checked)}
+                type="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
-              <label htmlFor="email">Remember me:</label>
+              {errors.email && (
+                <p className={styles.errorMessage}>{errors.email}</p>
+              )}
             </div>
           </div>
-          <div className="forgot-password">
-            <a href="/Forgotpassword">Forgot Password</a>
+          <div className={styles.password}>
+            <label htmlFor="password">Password</label>
+            <div>
+              <input
+                type="password"
+                placeholder="Enter your password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              {errors.password && (
+                <p style={{ color: "red" }}>{errors.password}</p>
+              )}
+            </div>
+          </div>
+          <div className={styles.forgotPassword}>
+            <p></p>
+            <a href="/Forgotpassword">Forgot Password?</a>
           </div>
           <div>
             {" "}
-            <button type="submit" className="btn btn-secondary">
+            <button
+              type="submit"
+              className={`btn btn-primary ${styles.loginBtn}`}
+            >
               Sign In
             </button>
           </div>
           <div>
-            Don't have an account? <a href="/registration"> Register </a>
+            Don't have an account ? <a href="/registration"> Register </a>
           </div>
         </form>
       </div>

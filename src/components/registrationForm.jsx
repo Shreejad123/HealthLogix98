@@ -71,7 +71,7 @@ const Registration = () => {
   };
   const validateEmail = (emailtest) => {
     if (!emailtest.trim()) {
-      setEmailError("Email is required");
+      setEmailError("");
       return false;
     }
     if (!emailRegex.test(emailtest)) {
@@ -141,126 +141,119 @@ const Registration = () => {
   return (
     <div className="container mt-3">
       <form onSubmit={handleSubmit}>
-        <div className="row jumbotron box8">
-          <h2 className="text-center">Register</h2>
-          <div className="col-sm-5 form-group">
-            <label htmlFor="firstNameInput">First Name</label>
-            <input
-              type="text"
-              id="firstNameInput"
-              value={firstName}
-              placeholder="Enter your First Name"
-              className="form-control"
-              onChange={(e) => {
-                setFirstName(e.target.value);
-                validateFirstName(e.target.value);
-              }}
-            />
-            {firstNameError && (
-              <p style={{ color: "red", marginLeft: "50px" }}>
-                {firstNameError}
-              </p>
-            )}
-          </div>
-          <div className="col-sm-6 form-group">
-            <label htmlFor="lastNameInput">Last Name</label>
-            <input
-              type="text"
-              id="lastNameInput"
-              value={lastName}
-              className="form-control"
-              placeholder="Enter your Last Name"
-              onChange={(e) => {
-                setLastName(e.target.value);
-                validateLastName(e.target.value);
-              }}
-            />
-            {lastNameError && (
-              <p style={{ color: "red", marginLeft: "50px" }}>
-                {lastNameError}
-              </p>
-            )}
-          </div>
-          <div className="col-sm-5 form-group">
-            <label htmlFor="Email">Email</label>
-            <input
-              type="email"
-              className="form-control"
-              id="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => {
-                setEmail(e.target.value);
-                validateEmail(e.target.value);
-              }}
-            />
-            {emailError && (
-              <p style={{ color: "red", marginLeft: "50px" }}>{emailError}</p>
-            )}
-          </div>
-          <div className="col-sm-6 form-group">
-            <label htmlFor="contactInput">Contact Number</label>
-            <input
-              type="text"
-              className="form-control"
-              id="contactInput"
-              placeholder="Enter your Contact Number"
-              value={contactNumber}
-              onChange={(e) => {
-                setContactNumber(e.target.value);
-                validateContact(e.target.value);
-              }}
-            />
-            {contactError && (
-              <p style={{ color: "red", marginLeft: "50px" }}>{contactError}</p>
-            )}
-          </div>
-          <div className="col-sm-5 form-group">
-            <label htmlFor="passwordInput">Password</label>
-            <input
-              type="password"
-              className="form-control"
-              id="passwordInput"
-              value={password}
-              placeholder="Enter your Password"
-              onChange={(e) => {
-                setPassword(e.target.value);
-                validatePasswords(e.target.value, confirmPassword);
-              }}
-            />
-            {passwordError && (
-              <p style={{ color: "red", marginLeft: "50px" }}>
-                {passwordError}
-              </p>
-            )}
-          </div>
-          <div className="col-sm-5 form-group">
-            <label htmlFor="confirmPasswordInput">Confirm Password</label>
-            <input
-              type="password"
-              className="form-control"
-              id="confirmPasswordInput"
-              value={confirmPassword}
-              placeholder="Re-Enter Password"
-              onChange={(e) => {
-                setConfirmPassword(e.target.value);
-                validatePasswords(password, e.target.value);
-              }}
-            />
-            {confirmPasswordError && (
-              <p style={{ color: "red", marginLeft: "50px" }}>
-                {confirmPasswordError}
-              </p>
-            )}
-          </div>
-          <button
-            type="submit"
-            className={`btn btn-primary ${styles.submitBtn}`}
-          >
-            Submit
-          </button>
-          <div className="link">
-            Already have an account ? <a href="/">Login</a>
+        <div className={styles.containerRegistration}>
+          <div className="row jumbotron box8">
+            <h2 className={styles.header}>Register</h2>
+
+            <div className={`col-sm-5 form-group ${styles.divinput}`}>
+              <label htmlFor="firstNameInput">First Name</label>
+              <input
+                type="text"
+                id="firstNameInput"
+                value={firstName}
+                placeholder="Enter your First Name"
+                className="form-control"
+                onChange={(e) => {
+                  setFirstName(e.target.value);
+                  validateFirstName(e.target.value);
+                }}
+              />
+              {firstNameError && (
+                <p className={styles.errorMessage}>{firstNameError}</p>
+              )}
+            </div>
+            <div className="col-sm-6 form-group">
+              <label htmlFor="lastNameInput">Last Name</label>
+              <input
+                type="text"
+                id="lastNameInput"
+                value={lastName}
+                className="form-control"
+                placeholder="Enter your Last Name"
+                onChange={(e) => {
+                  setLastName(e.target.value);
+                  validateLastName(e.target.value);
+                }}
+              />
+              {lastNameError && <p className={styles.errorMessage}></p>}
+            </div>
+            <div className={`col-sm-5 form-group ${styles.divinput}`}>
+              <label htmlFor="Email">Email</label>
+              <input
+                type="email"
+                className="form-control"
+                id="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  validateEmail(e.target.value);
+                }}
+              />
+              {emailError && (
+                <p className={styles.errorMessage}>{emailError}</p>
+              )}
+            </div>
+            <div className="col-sm-6 form-group">
+              <label htmlFor="contactInput">Contact Number</label>
+              <input
+                type="text"
+                className="form-control"
+                id="contactInput"
+                placeholder="Enter your Contact Number"
+                value={contactNumber}
+                onChange={(e) => {
+                  setContactNumber(e.target.value);
+                  validateContact(e.target.value);
+                }}
+              />
+              {contactError && (
+                <p className={styles.errorMessage}>{contactError}</p>
+              )}
+            </div>
+            <div className={`col-sm-5 form-group ${styles.divinput}`}>
+              <label htmlFor="passwordInput">Password</label>
+              <input
+                type="password"
+                className="form-control"
+                id="passwordInput"
+                value={password}
+                placeholder="Enter your Password"
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                  validatePasswords(e.target.value, confirmPassword);
+                }}
+              />
+              {passwordError && (
+                <p className={styles.errorMessage}>{passwordError}</p>
+              )}
+            </div>
+            <div className="col-sm-6 form-group">
+              <label htmlFor="confirmPasswordInput">Confirm Password</label>
+              <input
+                type="password"
+                className="form-control"
+                id="confirmPasswordInput"
+                value={confirmPassword}
+                placeholder="Re-Enter Password"
+                onChange={(e) => {
+                  setConfirmPassword(e.target.value);
+                  validatePasswords(password, e.target.value);
+                }}
+              />
+              {confirmPasswordError && (
+                <p className={styles.errorMessage}>{confirmPasswordError}</p>
+              )}
+            </div>
+            <button
+              type="submit"
+              className={`btn btn-primary ${styles.submitBtn}`}
+            >
+              Submit
+            </button>
+            <div className={styles.link}>
+              Already have an account ? <a href="/">Login</a>
+            </div>
           </div>
         </div>
       </form>

@@ -1,21 +1,15 @@
 body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: url("https://images.wallpapersden.com/image/download/firewatch-new-hd-22-art_bWpubm2UmZqaraWkpJRnamtlrWZpaWU.jpg")
-    no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
 }
-
 .loginContainer {
   background: white;
   padding: 25px;
-  width: 330px;
+  width: 400px;
+  height: 100%;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  margin-top: 80px;
 }
 
 .loginContainer h2 {
@@ -32,30 +26,29 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
   align-items: center;
-}
-
-.loginContainer button {
   width: 100%;
-  padding: 10px;
-  background: #2b7cff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
-.loginContainer button:hover {
-  background: #1d5fd1;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
 .custom-checkbox {
   margin-right: 5px;
+}
+.header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.errorMessage {
+  color: red;
+}
+.email,
+.password {
+  margin-bottom: 10px;
+}
+.forgotPassword {
+  margin-bottom: 15px;
+  text-align: right;
+}
+.loginBtn {
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  width: 100%;
 }

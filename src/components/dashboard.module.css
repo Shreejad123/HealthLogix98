@@ -1,13 +1,3 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  /* background: url("https://images.wallpapersden.com/image/download/firewatch-new-hd-22-art_bWpubm2UmZqaraWkpJRnamtlrWZpaWU.jpg")
-    no-repeat;
-  background-size: cover;
-  background-position: center; */
-}
 .dashboardContainer {
   background: white;
 
