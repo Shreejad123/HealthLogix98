@@ -10,7 +10,7 @@ body {
   background-position: center;
 }
 
-.login-container {
+.loginContainer {
   background: white;
   padding: 25px;
   width: 330px;
@@ -18,14 +18,14 @@ body {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.login-container h2 {
+.loginContainer h2 {
   margin-bottom: 20px;
 }
-.login-form {
+.loginForm {
   margin-left: 25px;
   margin-right: 25px;
 }
-.login-container input {
+.loginContainer input {
   border: 1px solid #ccc;
   border-radius: 6px;
   padding: 6px;
@@ -34,7 +34,7 @@ body {
   align-items: center;
 }
 
-.login-container button {
+.loginContainer button {
   width: 100%;
   padding: 10px;
   background: #2b7cff;
@@ -46,7 +46,7 @@ body {
   margin-bottom: 10px;
 }
 
-.login-container button:hover {
+.loginContainer button:hover {
   background: #1d5fd1;
 }
 

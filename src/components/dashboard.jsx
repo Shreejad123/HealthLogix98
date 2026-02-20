@@ -10,7 +10,6 @@ const Dashboard = () => {
   const [surgeryList, setSurgeryList] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Load surgeries from localStorage
   useEffect(() => {
     const savedData = localStorage.getItem("surgeryList");
     if (savedData) {
@@ -18,7 +17,6 @@ const Dashboard = () => {
     }
   }, []);
 
-  // Filter surgeries dynamically
   const filteredSurgeries =
     searchTerm.trim() === ""
       ? surgeryList

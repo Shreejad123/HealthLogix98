@@ -1,7 +1,7 @@
 // LoginForm.js
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./login.css";
+import styles from "./login.module.css";
 import Swal from "sweetalert2";
 
 function LoginForm() {
@@ -47,10 +47,10 @@ function LoginForm() {
     }
   };
   return (
-    <div className="login">
-      <div className="login-container">
-        <form className="login-form" onSubmit={handleSubmit}>
-          <h3 className="text-center mb-4">Login</h3>
+    <div className={styles.login}>
+      <div className={styles.loginContainer}>
+        <form className={styles.loginForm} onSubmit={handleSubmit}>
+          <h3 className="text-center mb - 4">Login</h3>
           <div>
             <label htmlFor="checkbox">Email:</label>
           </div>
