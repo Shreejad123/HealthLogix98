@@ -2,7 +2,8 @@
 import { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
-import "./registrationForm.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import styles from "./registrationForm.module.css";
 import Swal from "sweetalert2";
 
 const Registration = () => {
@@ -33,7 +34,7 @@ const Registration = () => {
     }
     if (!nameRegex.test(name)) {
       setFirstNameError(
-        "Only letters, spaces, hyphens, and apostrophes allowed."
+        "Only letters, spaces, hyphens, and apostrophes allowed.",
       );
       return false;
     }
@@ -48,7 +49,7 @@ const Registration = () => {
     }
     if (!nameRegex.test(name)) {
       setLastNameError(
-        "Only letters, spaces, hyphens, and apostrophes allowed."
+        "Only letters, spaces, hyphens, and apostrophes allowed.",
       );
       return false;
     }
@@ -252,7 +253,10 @@ const Registration = () => {
               </p>
             )}
           </div>
-          <button type="submit" className="btn btn-primary submit-btn">
+          <button
+            type="submit"
+            className={`btn btn-primary ${styles.submitBtn}`}
+          >
             Submit
           </button>
           <div className="link">

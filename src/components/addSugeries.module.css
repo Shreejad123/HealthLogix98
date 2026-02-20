@@ -17,8 +17,9 @@ label {
   border-radius: 10px;
   cursor: pointer;
   height: 35px;
-  margin-top: 25px;
-  width: 300px;
+  margin-left: 160px;
+  width: 500px;
+  margin-right: 20px;
 }
 .container input[type="text"],
 [type="date"] {

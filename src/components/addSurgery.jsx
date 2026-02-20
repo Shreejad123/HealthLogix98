@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./addSugeries.module.css";
+
 import Swal from "sweetalert2";
 
 const Addsurgery = () => {
