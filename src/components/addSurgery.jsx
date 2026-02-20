@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./addSugeries.css";
+import styles from "./addSugeries.module.css";
 import Swal from "sweetalert2";
 
 const Addsurgery = () => {
@@ -162,39 +162,10 @@ const Addsurgery = () => {
                 <p style={{ color: "red" }}>{errors.surgeryDate}</p>
               )}
             </div>
-            <div className="col-sm-5 form-group">
-              <label>Stent Removal Date:</label>
-              <input
-                type="date"
-                Placeholder="Enter your Surgery Date"
-                value={stentRemovalDate}
-                onChange={(e) => setStentRemovalDate(e.target.value)}
-              />
-
-              {errors.stentRemovalDate && (
-                <p style={{ color: "red" }}>{errors.stentRemovalDate}</p>
-              )}
-            </div>
-            <div className="col-sm-5 form-group">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                checked={patientReminder}
-                onChange={(e) => setPatientReminder(e.target.checked)}
-              />
-              <label>Patient Reminder</label>
-            </div>
-            <div className="col-sm-5 form-group">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                checked={doctorReminder}
-                onChange={(e) => setDoctorReminder(e.target.checked)}
-              />{" "}
-              <label>Doctor Reminder</label>
-            </div>
-
-            <button className="btn btn-primary save-btn" type="submit">
+            <button
+              className={`btn btn-primary ${styles.saveBtn}`}
+              type="submit"
+            >
               Save
             </button>
           </div>
