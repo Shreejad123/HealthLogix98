@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import SurgeryTable from "./surgeryTable";
 import SurgerySearch from "./searchbar";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./dashboard.css";
+import styles from "./dashboard.module.css";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -51,7 +51,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="dashboard-container">
+    <div className={styles.dashboardContainer}>
       <h1 className="text mb-4">Surgeries</h1>
       <SurgerySearch searchTerm={searchTerm} handleSearch={handleSearch} />
       <button onClick={handleAddClick} className="btn btn-secondary">

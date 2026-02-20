@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import "./patientDetails.css";
+import styles from "./patientDetails.module.css";
 
 const PatientDetails = () => {
   const { index } = useParams();
@@ -20,9 +20,9 @@ const PatientDetails = () => {
   }
 
   return (
-    <div className="container">
+    <div className={styles.container}>
       <div>
-        <div className="patientdeatils" style={{ padding: "20px" }}>
+        <div className={styles.patientdeatils}>
           <h2 className="text-center mb-4">Patient Details</h2>
           <p>
             <div className="col-sm">
