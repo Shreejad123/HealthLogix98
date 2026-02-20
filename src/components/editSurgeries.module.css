@@ -17,15 +17,13 @@ body {
 .box8 {
   box-shadow: 0px 0px 5px 1px #999;
   background: white;
-  height: 600px;
-  width: 800px;
 }
-.editsurgeries-container {
+.editsurgeriesContainer {
   background: white;
-  width: 600px;
-  height: 600px;
+  width: 900px;
+  height: 500px;
 }
-.my-btn {
+.myBtn {
   padding: 10px;
   background: #2b7cff;
   color: white;
@@ -82,4 +80,7 @@ input[type="checkbox"]:checked {
 }
 .form-control {
   margin-bottom: 20px;
+}
+.form {
+  margin-left: 200px;
 }

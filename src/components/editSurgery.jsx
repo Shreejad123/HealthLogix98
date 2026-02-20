@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import "./editSurgeries.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import styles from "./editSurgeries.module.css";
 import Swal from "sweetalert2";
 
 const EditSurgery = () => {
@@ -35,7 +36,7 @@ const EditSurgery = () => {
       if (selected) {
         selected.surgeryDate = convertToInputDate(selected.surgeryDate);
         selected.stentRemovalDate = convertToInputDate(
-          selected.stentRemovalDate
+          selected.stentRemovalDate,
         );
         setSurgery(selected);
       }
@@ -64,9 +65,9 @@ const EditSurgery = () => {
 
   return (
     <div>
-      <div className="container mt-3">
+      <div className={styles.editsurgeriesContainer}>
         <form onSubmit={handleSubmit}>
-          <div className="row jumbotron box8">
+          <div className={styles.form}>
             <h2 className="text-center">Edit Surgery</h2>
             <div className="col-sm-5 form-group">
               <label>Patient Full Name:</label>
@@ -118,49 +119,17 @@ const EditSurgery = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="col-sm-5 form-group">
-              <label>Stent Removal Date:</label>
-              <input
-                className="form-control"
-                type="date"
-                name="stentRemovalDate"
-                value={surgery.stentRemovalDate}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="col-sm-5 form-group">
-              <label>
-                <input
-                  type="checkbox"
-                  name="patientReminder"
-                  checked={surgery.patientReminder}
-                  onChange={handleChange}
-                />
-                Patient Reminder
-              </label>
-            </div>
-            <div className="col-sm-5 form-group">
-              <label>
-                <input
-                  type="checkbox"
-                  name="doctorReminder"
-                  checked={surgery.doctorReminder}
-                  onChange={handleChange}
-                />
-                Doctor Reminder
-              </label>
-            </div>
-            <button type="submit" className="btn btn-secondary my-btn">
-              Update
-            </button>
-            <button
-              type="button"
-              onClick={() => navigate("/dashboard")}
-              className="btn btn-secondary my-btn"
-            >
-              Cancel
-            </button>
           </div>
+          <button type="submit" className={`btn btn-primary ${styles.myBtn}`}>
+            Update
+          </button>
+          <button
+            type="button"
+            onClick={() => navigate("/dashboard")}
+            className={`btn btn-secondary ${styles.myBtn}`}
+          >
+            Cancel
+          </button>
         </form>
       </div>
     </div>
