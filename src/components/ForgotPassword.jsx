@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Forgotpassword.css";
+import styles from "./forgotPassword.module.css";
 import Swal from "sweetalert2";
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -29,8 +29,8 @@ const ForgotPassword = () => {
   };
   return (
     <div className="login">
-      <div className="login-container">
-        <form className="login-form" onSubmit={handleSubmit}>
+      <div className={styles.loginContainer}>
+        <form className={styles.loginForm} onSubmit={handleSubmit}>
           <h3 className="text-center mb-4">Forgot Password</h3>
           <div>
             <label htmlFor="checkbox">Email:</label>
